@@ -313,3 +313,107 @@ footer {
     display: block;
   }
 }
+
+/* Education Section Styles */
+.education {
+  padding: 100px 0;
+  background: var(--primary-color);
+}
+
+.education-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  position: relative;
+}
+
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: var(--secondary-color);
+}
+
+.education-card {
+  position: relative;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--card-bg);
+  border-radius: 10px;
+  width: calc(50% - 30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.education-card:nth-child(odd) {
+  margin-left: auto;
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.education-card:nth-child(odd)::before {
+  left: -40px;
+}
+
+.education-card:nth-child(even)::before {
+  right: -40px;
+}
+
+.edu-year {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+}
+
+.edu-details h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.edu-details p {
+  color: #999;
+}
+
+/* Updated Contact Section Styles */
+.contact-email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.contact-email a {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+.contact-email a:hover {
+  color: var(--accent-color);
+}
+
+/* Responsive Design for Education Section */
+@media (max-width: 768px) {
+  .education-timeline::before {
+    left: 20px;
+  }
+  
+  .education-card {
+    width: calc(100% - 50px);
+    margin-left: 50px !important;
+  }
+  
+  .education-card::before {
+    left: -40px !important;
+  }
+}
